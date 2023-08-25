@@ -180,6 +180,12 @@ export default {
   background: #faf9e8;
 }
 
+.btn:hover {
+  border: 3px solid #faf9e8;
+  background: #ee4823;
+  color: #faf9e8;
+}
+
 .card{
   background: #45A245;
 }

@@ -114,7 +114,7 @@ export default {
   border: 4px dashed #45A245;
 }
 
-.card-title{
+.card-title, .top-section{
   font-family: "Lalezar", cursive;
   text-transform: uppercase;
   font-size: 30px;

@@ -176,6 +176,14 @@ export default {
   border-radius: 20px;
   background: #faf9e8;
 }
+
+.btn:hover {
+  border: 3px solid #faf9e8;
+  background: #ee4823;
+  color: #faf9e8;
+}
+
+
 .header{
   font-family: 'Luckiest Guy', cursive;
   text-align: center;

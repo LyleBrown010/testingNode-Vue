@@ -18,6 +18,7 @@ export default {
 }
 .footer{
     margin: auto;
+    height: 50px;
 }
 
 span{

@@ -195,4 +195,12 @@ export default {
   border: 3px dashed #ee4823;
   background: #faf9e8;
 }
+
+.add-btn:hover,
+.clr-btn:hover {
+  border: 3px solid #faf9e8;
+  background: #ee4823;
+  color: #faf9e8;
+}
+
 </style>
