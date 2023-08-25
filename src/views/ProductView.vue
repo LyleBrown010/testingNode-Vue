@@ -118,7 +118,7 @@ export default {
 }
 
 .title {
-  height: 15%;
+  height: 15% ;
 }
 
 .button {
