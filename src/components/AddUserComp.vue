@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="text-center">
+    <div class="button">
     <a
       data-bs-toggle="modal"
       data-bs-target="#add-user-modal"
       href="#add-user-modal"
-      class="m-2 btn btn-outline-primary text-center"
+      class="m-2 btn btn-outline-danger text-center"
       
       >Add User</a
     >
@@ -172,7 +172,11 @@ export default {
 </script>
 
 <style scoped>
-.yellow-bg {
+.button{
+  float: right;
+}
+
+.yellow-bg{
   background: #45a245;
 }
 

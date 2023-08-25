@@ -32,46 +32,49 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body card">
+            <div>
             <label for="prodID" class="form-label">Product ID</label>
-            <input
+            <input class=".input-bg"
               placeholder="id"
               type="text"
               v-model="editingProduct.prodID"
             />
 
-            <label for="prodName" class="form-label">Product Name: *</label>
-            <input
+            </div>
+
+            <label for="prodName" class="form-label">Product Name: </label>
+            <input class=".input-bg"
               placeholder="name"
               type="text"
               v-model="editingProduct.prodName"
-            />
-            <label for="quantity" class="form-label">Quantity: *</label>
-            <input
+            /> <br>
+            <label for="quantity" class="form-label">Quantity: </label>
+            <input class=".input-bg"
               placeholder="quantity"
               type="number"
               v-model="editingProduct.quantity"
-            />
-            <label for="description" class="form-label">Description: *</label>
-            <input
+            /> <br>
+            <label for="description" class="form-label">Description: </label>
+            <input class=".input-bg"
               placeholder="description"
               type="text"
               v-model="editingProduct.prodDesc"
-            />
-            <label for="amount" class="form-label">Price: *</label>
-            <input
+            /> <br>
+            <label for="amount" class="form-label">Price: </label>
+            <input class=".input-bg"
               placeholder="amount"
               type="number"
               v-model="editingProduct.amount"
-            />
-            <label for="category" class="form-label">Category: *</label>
-            <input
+            /> <br>
+            <label for="category" class="form-label">Category: </label>
+            <input class=".input-bg"
               placeholder="category"
               type="text"
               v-model="editingProduct.category"
-            />
-            <label for="prodUrl" class="form-label">Product Image: *</label>
-            <input
+            /> <br>
+            <label for="prodUrl" class="form-label">Product Image: </label>
+            <input class=".input-bg"
               placeholder="image"
               type="text"
               v-model="editingProduct.prodUrl"
@@ -80,7 +83,7 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-secondary text-black"
               data-bs-dismiss="modal"
             >
               Close
@@ -153,11 +156,22 @@ export default {
 </script>
 
 <style scoped>
+
+
 .btn {
-  border: 2px solid #f7f4f1;
-  background-color: #f7f4f1;
-  margin-bottom: 1rem;
-  color: black;
-  box-shadow: 4px 4px black;
+  border: 3px solid #ee4823;
+  border-radius: 20px;
+  background: #faf9e8;
 }
+
+.card{
+  background: #f7bf3e ;
+}
+
+input{
+  border-radius: 10px;
+  width: 100%;
+  padding: 2px;
+}
+
 </style>

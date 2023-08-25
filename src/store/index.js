@@ -10,8 +10,8 @@ export default createStore({
     products: null,
     product: null,
     spinner: null,
-    token: null,
     msg: null,
+    asc: true, 
   },
   getters: {},
   mutations: {
@@ -33,14 +33,32 @@ export default createStore({
       state.selectedProduct = product
     },
     setSpinner(state, spinner) {
-      state.spinner = value;
-    },
-    setToken(state, token) {
-      state.token = token;
+      state.spinner = spinner;
     },
     setMsg(state, msg) {
       state.msg = msg;
+    },
+
+    sortProductsByPrice: (state) => {
+      state.products.sort((a, b) => { 
+        return a.amount - b.amount; 
+      }); 
+      if(!state.asc){
+        state.products.reverse(); 
+      }
+      state.asc = !state.asc
+    },
+
+    sortProductsByName: (state) => {
+      state.products.sort((a, b) => { 
+        return a.prodName.localeCompare(b.prodName); 
+      }); 
+      if(!state.asc){
+        state.products.reverse(); 
+      }
+      state.asc = !state.asc
     }
+
   },
   actions: {
     async fetchUsers(context) {

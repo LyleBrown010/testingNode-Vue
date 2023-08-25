@@ -8,12 +8,12 @@
       data-bs-toggle="modal"
       :data-bs-target="'#texampleModal' + user.userID"
     >
-      edit
+      Edit
     </button>
 
     <!-- Modal -->
     <div
-      class="modal fade"
+      class="modal fade p-3"
       :id="'texampleModal' + user.userID"
       tabindex="-1"
       :aria-labelledby="'texampleModalLabel' + user.userID"
@@ -32,43 +32,71 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            <input type="text" placeholder="ID" v-model="editingUser.userID" />
+          <div class="modal-body card">
+            <div class="mb-3 text-font">
+              <label for="">UserID</label> <br>
+              <input
+                type="text"
+                placeholder="ID"
+                v-model="editingUser.userID"
+              />
+            </div>
+            <div class="mb-3 text-font">
+              <label for="">First Name</label> <br>
             <input
               type="text"
               placeholder="first name"
               v-model="editingUser.firstName"
             />
+            </div>
+            <div class="mb-3 text-font">
+              <label for="">Last Name</label> <br>
             <input
               type="text"
               placeholder="last name"
               v-model="editingUser.lastName"
             />
+            </div>
+            <div class="mb-3 text-font">
+              <label for="">Age</label> <br>
             <input
               type="number"
               placeholder="age"
               v-model="editingUser.userAge"
             />
+            </div>
+            <div class="mb-3 text-font">
+              <label for="">Gender</label> <br>
             <input
               type="text"
               placeholder="gender"
               v-model="editingUser.gender"
             />
+            </div>
+            <div class="mb-3 text-font">
+              <label for="">Role</label> <br>
             <input
               type="text"
               placeholder="role"
               v-model="editingUser.userRole"
             />
+            </div>
+            <div class="mb-3 text-font">
+              <label for="">Email Address</label> <br>
             <input
               type="text"
               placeholder="email address"
               v-model="editingUser.emailAdd"
             />
+            </div>
+            <div class="mb-3 text-font">
+              <label for="">Profile Image</label> <br>
             <input
               type="text"
               placeholder="profile image"
               v-model="editingUser.userProfile"
             />
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn" data-bs-dismiss="modal">
@@ -79,7 +107,7 @@
               class="btn"
               @click="updateProduct(user.userID)"
             >
-              Save changes
+              Update!
             </button>
           </div>
         </div>
@@ -131,9 +159,9 @@ export default {
         })
         .then(() => {
           console.log("User updated!");
-          setTimeout(()=>{
-            location.reload()
-          }, 500)
+          setTimeout(() => {
+            window.location.reload();
+          }, 5000);
         })
         .catch((err) => {
           console.error("Error updating: ", err);
@@ -144,11 +172,21 @@ export default {
 </script>
 
 <style scoped>
+
+
 .btn {
-  border: 2px solid #f7f4f1;
-  background-color: #f7f4f1;
-  margin-bottom: 1rem;
-  color: black;
-  box-shadow: 4px 4px black;
+  border: 3px solid #ee4823;
+  border-radius: 20px;
+  background: #faf9e8;
+}
+
+.card{
+  background: #45A245;
+}
+
+input{
+  border-radius: 10px;
+  width: 100%;
+  padding: 2px;
 }
 </style>

@@ -17,6 +17,10 @@ at 'PUZZLES DELI'. “</div>
 </template>
 
 <style scoped>
+*{
+  background-color: #faf9e8;
+}
+
 #yellow{
   background-color: #f7bf3e;
 }

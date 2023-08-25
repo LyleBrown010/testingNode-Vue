@@ -1,18 +1,20 @@
 <template>
+  <h1 class="header">Admin</h1>
   <div>
-    <h1>Users</h1>
+    <h1 class="users">Users</h1>
     <addUser />
-    <table class="table">
+    <div class="table">
+          <table>
       <thead>
         <tr>
           <th>ID</th>
-          <th>name</th>
-          <th>surname</th>
-          <th>age</th>
-          <th>gender</th>
-          <th>role</th>
-          <th>email address</th>
-          <th>profile image</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Role</th>
+          <th>Email Address</th>
+          <th>Profile Image</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -25,7 +27,7 @@
           <td>{{ user.gender }}</td>
           <td>{{ user.userRole }}</td>
           <td>{{ user.emailAdd }}</td>
-          <td>
+          <td class="image">
             <img
               :src="user.userProfile"
               :alt="user.firstName"
@@ -38,7 +40,7 @@
               class="btn"
               @click="deleteUser(user.userID)"
             >
-              delete
+              Delete
             </button>
           </td>
         </tr>
@@ -47,19 +49,23 @@
         </tr>
       </tbody>
     </table>
+    </div>
+
+    <br><br>
     <div>
-      <h1>products</h1>
+      <h1 class="products">Products</h1>
       <addProduct />
-      <table class="table">
+      <div class="table">
+        <table >
         <thead>
           <tr>
             <th>ID</th>
-            <th>name</th>
-            <th>quantity</th>
-            <th>price</th>
-            <th>category</th>
-            <th>description</th>
-            <th>product image</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Product Image</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -82,7 +88,7 @@
             <td>
               <updateProduct :product="product" />
               <button @click="deleteProduct(product.prodID)" class="btn">
-                delete
+                Delete
               </button>
             </td>
           </tr>
@@ -91,6 +97,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 </template>
@@ -150,8 +157,43 @@ export default {
 </script>
 
 <style scoped>
-tr, th{
+*{
+  background-color: #faf9e8;
+  font-family: "Londrina Solid", cursive;
+}
+
+.img-fluid{
+  width: 50px;
+  height: 50px;
+}
+
+.image{
+  text-align: center;
+}
+
+.btn{
+  border: 3px solid #ee4823;
+  border-radius: 20px;
+  background: #faf9e8;
+}
+.header{
+  font-family: 'Luckiest Guy', cursive;
+  text-align: center;
+  font-size: 80px;
+  color: black;
+}
+
+.users, .products{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 37px;
+  color: black;
+  margin-left: 10px;
+
+}
+
+tr, th, td{
     border: 3px dashed #ee4823;
+    padding: 3px;
 }
 
 th{
@@ -162,7 +204,11 @@ table{
     width: 100%;
 }
 
-
+.table{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
 
 .bg-yellow{
     padding: 2%;
