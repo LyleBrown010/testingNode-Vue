@@ -65,6 +65,9 @@ export default {
 </script>
 
 <style scoped>
+*{
+  background-color: #faf9e8;
+}
 
 .router-link-active {
   color: #f7bf3e !important;

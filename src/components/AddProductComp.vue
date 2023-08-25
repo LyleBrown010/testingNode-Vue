@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="text-center">
+    <div class="button">
       <a
         data-bs-toggle="modal"
         data-bs-target="#add-product-modal"
         href="#add-product-modal"
-        class="m-2 btn btn-outline-primary text-center"
+        class="m-2 btn btn-outline-danger text-center"
         id="add-book-btn"
         >Add Product</a
       >
@@ -169,6 +169,11 @@ export default {
 </script>
 
 <style scoped>
+
+.button{
+  float: right;
+}
+
 .yellow-bg {
   background: #f7bf3e;
 }

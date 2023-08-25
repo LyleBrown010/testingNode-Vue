@@ -13,6 +13,9 @@ export default {
 </script>
 
 <style scoped>
+*{
+  background-color: #faf9e8;
+}
 .footer{
     margin: auto;
 }

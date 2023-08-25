@@ -1,13 +1,14 @@
 <template>
-  <div>
-    <div v-if="product">
-      <h1>{{ product.prodName }}</h1>
+  <div class="single-view">
+    <div v-if="product" class="card">
       <div>
-        <img :src="product.prodUrl" :alt="product.prodName" />
-        <p>Category: {{ product.category }}</p>
-        <p>Description: {{ product.prodDesc }}</p>
-        <p>Price: R{{ product.price }}</p>
-        <!-- Add other product details as needed -->
+        <div class="image-section">
+          <img :src="product.prodUrl" :alt="product.prodName" />
+        </div>
+        <h1 class="text-center">{{ product.prodName }}</h1>
+        <p class="fs-4">Category: {{ product.category }}</p>
+        <p>{{ product.prodDesc }}</p>
+        <p class="fs-2">Price: R{{ product.amount }}</p>
       </div>
     </div>
     <div v-else>
@@ -30,4 +31,36 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+  *{
+  background-color: #faf9e8;
+}
+
+.single-view{
+  display: flex;
+  justify-content: center;
+}
+.card{
+  width: 450px;
+  border: 4px dashed #45A245;
+  font-family: "Lalezar", cursive;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+img{
+  width: 70%;
+  background-color: #f7bf3e;
+}
+
+.image-section{
+  display: flex;
+  justify-content: center;
+  border: 4px dashed #45A245;
+  border-radius: 15px;
+  background-color: #f7bf3e;
+}
+
+
+
+</style>
